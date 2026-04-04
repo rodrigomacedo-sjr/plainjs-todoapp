@@ -3,8 +3,8 @@ Simple TODO app written in plain js as an exercise of [The Odin Project](https:/
 Focused on working with JSON, Webpack and practicing basic OOP principles and following SOLID coding patterns.
 
 # TODO
-- [ ] entity relation and definition
-- [ ] low fidelity wireframe
+- [x] entity relation and definition
+- [x] low fidelity wireframe
 - [ ] setup webpack
     - [ ] basic things
     - [ ] date-fns plugin
