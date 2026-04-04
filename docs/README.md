@@ -7,7 +7,7 @@ Focused on working with JSON, Webpack and practicing basic OOP principles and fo
 - [ ] low fidelity wireframe
 - [ ] setup webpack
     - [ ] basic things
-    - [ ] dates plugin
+    - [ ] date-fns plugin
 - [ ] code up basic entities
     - [ ] 1
     - [ ] 2
