@@ -5,13 +5,12 @@ Focused on working with JSON, Webpack and practicing basic OOP principles and fo
 # TODO
 - [x] entity relation and definition
 - [x] low fidelity wireframe
-- [ ] setup webpack
-    - [ ] basic things
-    - [ ] date-fns plugin
+- [x] setup webpack
+    - [x] basic things
+    - [x] date-fns plugin
 - [ ] code up basic entities
-    - [ ] 1
-    - [ ] 2
-    - [ ] ...
+    - [ ] task
+    - [ ] list
 - [ ] local storage connection
 - [ ] page skeleton (UI)
 - [ ] navigation (UI)
