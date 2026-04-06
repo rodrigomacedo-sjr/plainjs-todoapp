@@ -1,3 +1,3 @@
-import { greeting } from "./greeting.js";
+import Task from "./entities/Task.js";
 
-console.log(greeting);
+console.log(Task);
