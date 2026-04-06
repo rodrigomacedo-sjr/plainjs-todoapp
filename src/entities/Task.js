@@ -58,7 +58,8 @@ class Task {
   }
 
   update(updated) {
-    let returnError = false, err;
+    let returnError = false;
+    let err;
 
     [this.#title, err] = Validation.matchPropAndType(
       updated,
