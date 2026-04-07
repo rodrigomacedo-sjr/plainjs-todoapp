@@ -8,9 +8,9 @@ Focused on working with JSON, Webpack and practicing basic OOP principles and fo
 - [x] setup webpack
     - [x] basic things
     - [x] date-fns plugin
-- [ ] code up basic entities
-    - [ ] task
-    - [ ] list
+- [x] code up basic entities
+    - [x] task
+    - [x] list
 - [ ] local storage connection
 - [ ] page skeleton (UI)
 - [ ] navigation (UI)
