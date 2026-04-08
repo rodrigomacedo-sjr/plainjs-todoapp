@@ -1,4 +1,4 @@
-import Validation from "../utils/Validation";
+import Validation from "../modules/Validation";
 
 class List {
   #id;

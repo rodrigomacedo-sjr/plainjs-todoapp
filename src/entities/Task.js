@@ -1,6 +1,6 @@
 import Priority from "../types/Priority.js";
 import Status from "../types/Status.js";
-import Validation from "../utils/Validation.js";
+import Validation from "../modules/Validation.js";
 
 class Task {
   #id;
