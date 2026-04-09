@@ -1,3 +1,4 @@
-import Task from "./entities/Task.js";
+import Renderer from "./modules/Renderer.js";
+import Navbar from ""
 
-console.log(Task);
+Renderer.replaceContent()
