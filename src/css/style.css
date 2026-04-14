@@ -1,0 +1,11 @@
+@import "./reset.css";
+@import "./theme.css";
+
+body {
+  background-color: var(--light-gray-blue);
+}
+
+* {
+  width: 100%;
+  height: 100%;
+}

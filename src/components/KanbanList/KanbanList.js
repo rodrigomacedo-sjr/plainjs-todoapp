@@ -1,9 +1,15 @@
-import TaskCard from "../TaskCard/TaskCard";
+import TaskCard from "../TaskCard/TaskCard.js";
+import Logger from "../../modules/Logger.js";
 
 const KanbanList = function(name, tasks) {
-  const PREFIX = "kanban-list";
+  if (!Array.isArray(tasks)) {
+    Logger.error("KanbanList.js", "tasks should be an array");
 
-  const content = document.createElement();
+    return document.createElement("div");
+  }
+
+  const PREFIX = "kanban-list";
+  const content = document.createElement("div");
   content.className = PREFIX;
 
   const title = document.createElement("h2");
@@ -11,12 +17,14 @@ const KanbanList = function(name, tasks) {
   content.appendChild(title);
 
   const innerContent = document.createElement("div");
-  content.className = `${PREFIX}-inner`;
+  innerContent.className = `${PREFIX}-inner`;
   content.appendChild(innerContent);
 
   for (const task of tasks) {
     innerContent.appendChild(TaskCard(task));
   }
+
+  return content;
 };
 
 export default KanbanList;

@@ -1,5 +1,6 @@
 import Filter from "../../modules/Filter.js";
 import Status from "../../types/Status.js";
+import KanbanList from "../KanbanList/KanbanList.js";
 
 const TaskList = function(tasks) {
   const PREFIX = "task-list";
