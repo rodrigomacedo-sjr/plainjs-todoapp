@@ -1,3 +1,7 @@
+import TaskListTags from "../components/TaskListTags/TaskListTags.js";
+import TaskList from "../components/TaskList/TaskList.js";
+import Navbar from "../components/Navbar/Navbar.js";
+
 const Renderer = (function() {
   let content = document.getElementById("content");
   if (content === null) {
@@ -30,10 +34,30 @@ const Renderer = (function() {
     };
   };
 
+  const fullRender = function(data, state) {
+    Renderer.replaceContent(Navbar(data));
+    switch (state) {
+      case "today":
+        Renderer.replaceInnerPage(TaskList(data));
+        break;
+      case "week":
+        Renderer.replaceInnerPage(TaskList(data));
+        break;
+      case "tags":
+        Renderer.replaceInnerPage(TaskListTags(data));
+        break;
+      case "all":
+      default:
+        Renderer.replaceInnerPage(TaskList(data));
+        break;
+    }
+  };
+
   return {
     replaceContent,
     replaceInnerPage,
     replaceInnerPageCallback,
+    fullRender,
   };
 })();
 
