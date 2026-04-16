@@ -1,6 +1,7 @@
 import TaskListTags from "../components/TaskListTags/TaskListTags.js";
 import TaskList from "../components/TaskList/TaskList.js";
 import Navbar from "../components/Navbar/Navbar.js";
+import TaskCreationModal from "../components/TaskCreationModal/TaskCreationModal.js";
 
 const Renderer = (function() {
   let content = document.getElementById("content");
@@ -21,6 +22,7 @@ const Renderer = (function() {
     content.innerHTML = "";
     content.appendChild(div);
     content.appendChild(innerPage);
+    content.appendChild(TaskCreationModal.init())
   };
 
   const replaceInnerPage = function(div) {

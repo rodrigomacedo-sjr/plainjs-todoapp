@@ -7,6 +7,7 @@ import { endOfToday, startOfToday } from "date-fns";
 import Storage from "../../modules/Storage.js";
 import Config from "../../modules/Config.js";
 import Logger from "../../modules/Logger.js";
+import TaskCreationModal from "../TaskCreationModal/TaskCreationModal.js";
 
 const Navbar = function(tasks) {
   const PREFIX = "navbar";
@@ -43,6 +44,10 @@ const Navbar = function(tasks) {
   navbar.appendChild(
     NavItem("Tags", Renderer.replaceInnerPageCallback(TaskListTags(tasks))),
   );
+
+  navbar.appendChild(
+    NavItem("Add Task", TaskCreationModal.open)
+  )
 
   return navbar;
 };
