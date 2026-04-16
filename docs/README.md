@@ -11,9 +11,13 @@ Focused on working with JSON, Webpack and practicing basic OOP principles and fo
 - [x] code up basic entities
     - [x] task
     - [x] list
-- [ ] local storage connection
-- [ ] page skeleton (UI)
-- [ ] navigation (UI)
+- [x] local storage connection
+- [x] page skeleton (UI)
+- [x] navigation (UI)
+- [x] creation form
+    - [ ] form works w local storage
+- [ ] edit form
+- [ ] delete task
 - [ ] task drawing
 - [ ] theme
 - [ ] gh-pages deploy
