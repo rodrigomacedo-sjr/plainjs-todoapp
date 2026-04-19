@@ -4,8 +4,6 @@ import KanbanList from "../KanbanList/KanbanList.js";
 
 const TaskListTags = function(tasks) {
   const PREFIX = "task-list-tags";
-  console.log("TAGS");
-  console.log(tasks);
 
   const content = document.createElement("div");
   content.className = PREFIX;

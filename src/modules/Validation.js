@@ -16,6 +16,10 @@ const Validation = (function() {
       return [fallback, false];
     }
 
+    if (object[prop] == "" || object[prop] == null) {
+      return [fallback, false];
+    }
+
     if (object[prop] instanceof type) {
       return [object[prop], false];
     } else {

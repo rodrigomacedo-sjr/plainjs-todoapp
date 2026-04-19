@@ -1,3 +1,9 @@
+import Config from "../../modules/Config.js";
+import Logger from "../../modules/Logger.js";
+import Renderer from "../../modules/Renderer.js";
+import Storage from "../../modules/Storage.js";
+import Task from "../../entities/Task.js";
+
 const TaskCreationModal = (function() {
   const PREFIX = "task-creation";
 
@@ -10,8 +16,8 @@ const TaskCreationModal = (function() {
     <label for="description">Description:</label>
     <input type=text id="task-description" name="description" minlength="4">
 
-    <label for="date">Due date:</label>
-    <input type=date id="task-date" name="date">
+    <label for="dueDate">Due date:</label>
+    <input type=date id="task-date" name="dueDate">
 
     <label for="priority">Priority:</label>
       <select id="task-priority" name="priority" required>
@@ -50,11 +56,28 @@ const TaskCreationModal = (function() {
     const form = event.target;
 
     const data = new FormData(form);
-    const entries = Object.fromEntries(data.entries());
+    const obj = Object.fromEntries(data.entries());
 
     dialog.close();
 
-    console.log("data: ", entries);
+    const newTask = new Task(obj);
+
+    const tasks = Storage.loadTasks();
+    if (!tasks) {
+      Logger.error("handleSubmission", "error loading tasks");
+    }
+    tasks.push(newTask);
+
+    Storage.saveTasks(tasks);
+
+    const screen = Storage.loadObj(Config.LAST_SCREEN_KEY);
+    if (screen.error) {
+      Logger.error("index.js", screen.error);
+    }
+
+    form.reset();
+
+    Renderer.fullRender(tasks, screen.result);
   };
 
   form.addEventListener("submit", handleSubmission);
