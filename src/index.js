@@ -8,7 +8,7 @@ if (!tasks) {
   Logger.error("index.js", "error loading tasks");
 }
 
-const screen = Storage.loadObj(Config.LAST_SCREEN_KEY);
+const screen = Storage.loadStr(Config.LAST_SCREEN_KEY);
 if (screen.error) {
   Logger.error("index.js", screen.error);
 }

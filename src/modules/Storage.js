@@ -55,6 +55,10 @@ const Storage = (function() {
     }
   };
 
+  const loadStr = function(strKey) {
+    return localStorage.getItem(strKey);
+  };
+
   const saveTasks = function(tasks) {
     return saveObj(tasks, Config.TASK_LIST_KEY);
   };
@@ -65,7 +69,7 @@ const Storage = (function() {
 
     if (tasksObj.error || !tasksObj.result) {
       Logger.error("loadTasks", "error loading tasks");
-      return;
+      return [];
     }
 
     for (const task of tasksObj.result) {
@@ -77,6 +81,7 @@ const Storage = (function() {
   return {
     saveObj,
     loadObj,
+    loadStr,
     saveTasks,
     loadTasks,
   };

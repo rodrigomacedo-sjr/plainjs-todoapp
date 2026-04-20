@@ -1,4 +1,4 @@
-import Validation from "../modules/Validation";
+import Validation from "../modules/Validation.js";
 
 class List {
   #id;
@@ -6,10 +6,11 @@ class List {
   #description;
   #tasks = [];
 
-  constructor(title, description) {
+  constructor(title, description, tasks = []) {
     this.#id = crypto.randomUUID();
     this.#title = "New List";
     this.#description = "";
+    this.#tasks = tasks;
 
     this.update({
       title: title,
