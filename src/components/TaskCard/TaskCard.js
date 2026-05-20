@@ -3,6 +3,7 @@ import List from "../../entities/List.js";
 import Logger from "../../modules/Logger.js";
 import Renderer from "../../modules/Renderer.js";
 import Storage from "../../modules/Storage.js";
+import TaskEditModal from "../TaskEditModal/TaskEditModal.js";
 
 const TaskCard = function(task) {
   const PREFIX = "task-card";
@@ -18,14 +19,20 @@ const TaskCard = function(task) {
     <p>${task.dueDate}</p>
     <p>${task.status}</p>
   </div>
+  <button type="edit" value="edit" class="edit-task">edit</button>
   <button type="delete" value="delete" class="delete-task">delete</button>
 <div>
 `;
 
   const parsed = document.createRange().createContextualFragment(raw);
 
-  const button = parsed.querySelector(".delete-task");
-  button.addEventListener("click", (event) => {
+  const editBtn = parsed.querySelector(".edit-task");
+  editBtn.addEventListener("click", () => {
+    TaskEditModal.open(task);
+  });
+
+  const delBtn = parsed.querySelector(".delete-task");
+  delBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
     const storedTasks = Storage.loadTasks();

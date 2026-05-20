@@ -2,6 +2,7 @@ import TaskListTags from "../components/TaskListTags/TaskListTags.js";
 import TaskList from "../components/TaskList/TaskList.js";
 import Navbar from "../components/Navbar/Navbar.js";
 import TaskCreationModal from "../components/TaskCreationModal/TaskCreationModal.js";
+import TaskEditModal from "../components/TaskEditModal/TaskEditModal.js";
 
 const Renderer = (function() {
   let content = document.getElementById("content");
@@ -23,6 +24,7 @@ const Renderer = (function() {
     content.appendChild(div);
     content.appendChild(innerPage);
     content.appendChild(TaskCreationModal.init())
+    content.appendChild(TaskEditModal.init())
   };
 
   const replaceInnerPage = function(div) {
