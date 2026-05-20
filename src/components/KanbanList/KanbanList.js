@@ -1,5 +1,6 @@
 import TaskCard from "../TaskCard/TaskCard.js";
 import Logger from "../../modules/Logger.js";
+import "./kanban-list.css";
 
 const KanbanList = function(name, tasks) {
   if (!Array.isArray(tasks)) {

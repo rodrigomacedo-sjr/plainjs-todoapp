@@ -1,3 +1,4 @@
+import "./css/style.css";
 import Renderer from "./modules/Renderer.js";
 import Storage from "./modules/Storage.js";
 import Config from "./modules/Config.js";

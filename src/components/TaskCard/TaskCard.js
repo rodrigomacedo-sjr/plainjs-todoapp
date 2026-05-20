@@ -4,6 +4,7 @@ import Logger from "../../modules/Logger.js";
 import Renderer from "../../modules/Renderer.js";
 import Storage from "../../modules/Storage.js";
 import TaskEditModal from "../TaskEditModal/TaskEditModal.js";
+import "./task-card.css";
 
 const TaskCard = function(task) {
   const PREFIX = "task-card";
@@ -13,7 +14,7 @@ const TaskCard = function(task) {
     <h1>${task.title}</h1>
     <p>${task.getPrettyDate(true, "/")}</p>
     <p>${task.description}</p>
-    <p>${task.priority}</p>
+    <p class="${PREFIX}-${task.priority}">${task.priority}</p>
     <p>${task.status}</p>
   <div class="${PREFIX}-buttons">
     <button type="edit" value="edit" class="edit-task">edit</button>

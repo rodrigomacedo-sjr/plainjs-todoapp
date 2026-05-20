@@ -2,12 +2,9 @@ import Filter from "../../modules/Filter.js";
 import NavItem from "../NavItem/NavItem.js";
 import Renderer from "../../modules/Renderer.js";
 import TaskList from "../TaskList/TaskList.js";
-import TaskListTags from "../TaskListTags/TaskListTags.js";
 import { endOfToday, startOfToday } from "date-fns";
-import Storage from "../../modules/Storage.js";
-import Config from "../../modules/Config.js";
-import Logger from "../../modules/Logger.js";
 import TaskCreationModal from "../TaskCreationModal/TaskCreationModal.js";
+import "./navbar.css";
 
 const Navbar = function(tasks) {
   const PREFIX = "navbar";

@@ -1,0 +1,107 @@
+.task-card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-blue);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 0 var(--blue-soft);
+  min-height: 230px;
+  font-family: var(--main-font);
+}
+
+.task-card:hover {
+  border-color: var(--blue);
+}
+
+.task-card h1 {
+  font-size: 1.35rem;
+  font-weight: var(--fw-extrabold);
+  color: var(--text);
+}
+
+.task-card p:nth-of-type(1) {
+  font-size: 0.85rem;
+  color: var(--blue);
+  font-weight: var(--fw-bold);
+}
+
+.task-card p:nth-of-type(2) {
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  color: var(--muted);
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.task-card p:nth-of-type(3) {
+  font-weight: var(--fw-bold);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+}
+
+.task-card p:nth-of-type(4) {
+  display: none;
+}
+
+.task-card-low {
+  background-color: var(--green-soft);
+  color: var(--green);
+}
+
+.task-card-normal {
+  background-color: var(--yellow-soft);
+  color: var(--yellow);
+}
+
+.task-card-high {
+  background-color: var(--red-soft);
+  color: var(--red);
+}
+
+.task-card-buttons {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.task-card-buttons button {
+  flex: 1;
+  padding: 0.55rem;
+  border-radius: 6px;
+  font-family: var(--main-font);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.edit-task {
+  background-color: var(--blue-soft);
+  border: 1px solid var(--blue);
+  color: var(--dark-blue);
+}
+
+.delete-task {
+  background-color: var(--red-soft);
+  border: 1px solid var(--red);
+  color: #9f3737;
+}
+
+.task-card-buttons button:hover {
+  color: var(--white);
+}
+
+.edit-task:hover {
+  background-color: var(--blue);
+}
+
+.delete-task:hover {
+  background-color: var(--red);
+}

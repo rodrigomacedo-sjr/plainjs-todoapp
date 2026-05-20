@@ -4,6 +4,7 @@ import List from "../../entities/List.js";
 import Renderer from "../../modules/Renderer.js";
 import Storage from "../../modules/Storage.js";
 import Task from "../../entities/Task.js";
+import "./task-edit-modal.css";
 
 const TaskEditModal = (function() {
   const PREFIX = "task-edit";

@@ -3,6 +3,7 @@ import Logger from "../../modules/Logger.js";
 import Renderer from "../../modules/Renderer.js";
 import Storage from "../../modules/Storage.js";
 import Task from "../../entities/Task.js";
+import "./task-creation-modal.css";
 
 const TaskCreationModal = (function() {
   const PREFIX = "task-creation";

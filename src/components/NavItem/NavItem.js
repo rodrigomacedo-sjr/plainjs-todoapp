@@ -1,3 +1,5 @@
+import "./nav-item.css";
+
 const NavItem = function(title, callBack) {
   const item = document.createElement("div");
   item.className = "nav-item";

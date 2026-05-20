@@ -1,13 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap");
 
 :root {
-  --white: #ffffffff;
-  --light-gray-blue: #cadeefff;
-  --gray-blue: #9bd3e4ff;
-  --blue: #39ace7ff;
-  --dark-blue: #0784b5ff;
+  --white: #ffffff;
+  --bg: #eef7ff;
+  --light-gray-blue: #d7ecff;
+  --gray-blue: #9fcce8;
+  --blue: #3f9fda;
+  --dark-blue: #175d8f;
+  --text: #123047;
+  --muted: #637d93;
+  --green: #65bf8a;
+  --yellow: #efbf55;
+  --red: #e56d6d;
+  --blue-soft: #e5f3ff;
+  --green-soft: #e8f7ee;
+  --yellow-soft: #fff3cf;
+  --red-soft: #ffe2e2;
 
-  --main-font: "Plus Jakarta Sans", sans-serif;
+  --main-font: "Nunito", sans-serif;
   --fw-light: 300;
   --fw-regular: 400;
   --fw-bold: 700;
