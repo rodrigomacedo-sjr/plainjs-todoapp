@@ -21,6 +21,6 @@ export default merge(common, {
     ],
   },
   optimization: {
-    minimizer: [`...`, new CssMinimizerPlugin()],
+    minimizer: [`...`, new CssMinimizerPlugin({ parallel: false })],
   },
 });
