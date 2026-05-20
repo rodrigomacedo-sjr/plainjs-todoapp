@@ -18,6 +18,5 @@ Focused on working with JSON, Webpack and practicing basic OOP principles and fo
     - [x] form works w local storage
 - [x] edit form
 - [x] delete task
-- [ ] ui
-- [ ] gh-pages deploy
-
+- [x] ui
+- [x] gh-pages deploy
