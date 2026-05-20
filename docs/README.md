@@ -16,8 +16,8 @@ Focused on working with JSON, Webpack and practicing basic OOP principles and fo
 - [x] navigation (UI)
 - [x] creation form
     - [x] form works w local storage
-- [ ] edit form
+- [x] edit form
 - [x] delete task
-- [ ] projects
+- [ ] ui
 - [ ] gh-pages deploy
 
