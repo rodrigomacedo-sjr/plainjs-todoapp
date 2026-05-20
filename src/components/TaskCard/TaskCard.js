@@ -10,17 +10,15 @@ const TaskCard = function(task) {
 
   const raw = `
 <div class="${PREFIX}">
-  <div class="${PREFIX}-content">
     <h1>${task.title}</h1>
-    <p>${task.description}</p>
-  </div>
-  <div class="${PREFIX}-status">
-    <p>${task.priority}</p>
     <p>${task.getPrettyDate(true, "/")}</p>
+    <p>${task.description}</p>
+    <p>${task.priority}</p>
     <p>${task.status}</p>
+  <div class="${PREFIX}-buttons">
+    <button type="edit" value="edit" class="edit-task">edit</button>
+    <button type="delete" value="delete" class="delete-task">delete</button>
   </div>
-  <button type="edit" value="edit" class="edit-task">edit</button>
-  <button type="delete" value="delete" class="delete-task">delete</button>
 <div>
 `;
 
