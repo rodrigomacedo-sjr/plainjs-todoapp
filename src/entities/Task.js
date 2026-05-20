@@ -39,6 +39,19 @@ class Task {
     };
   }
 
+  getPrettyDate(human = false, separator = "-") {
+    const d = new Date(this.dueDate);
+    d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
+    let result = d.toISOString().slice(0, 10);
+
+    if (human) {
+      let [y, m, d] = result.split("-");
+      result = `${m}-${d}-${y}`;
+    }
+
+    return result.replace("-", separator).replace("-", separator);
+  }
+
   addTag(tag) {
     if (!this.tags.includes(tag)) {
       this.tags.push(tag);

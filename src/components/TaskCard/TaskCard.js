@@ -16,7 +16,7 @@ const TaskCard = function(task) {
   </div>
   <div class="${PREFIX}-status">
     <p>${task.priority}</p>
-    <p>${task.dueDate}</p>
+    <p>${task.getPrettyDate(true, "/")}</p>
     <p>${task.status}</p>
   </div>
   <button type="edit" value="edit" class="edit-task">edit</button>

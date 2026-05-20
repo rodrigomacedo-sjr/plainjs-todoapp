@@ -42,10 +42,6 @@ const Navbar = function(tasks) {
   );
 
   navbar.appendChild(
-    NavItem("Tags", Renderer.replaceInnerPageCallback(TaskListTags(tasks))),
-  );
-
-  navbar.appendChild(
     NavItem("Add Task", TaskCreationModal.open)
   )
 

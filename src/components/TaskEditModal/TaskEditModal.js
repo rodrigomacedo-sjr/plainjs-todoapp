@@ -49,11 +49,8 @@ const TaskEditModal = (function() {
     document.querySelector(`#${PREFIX}-title`).value = task.title ?? "";
     document.querySelector(`#${PREFIX}-description`).value =
       task.description ?? "";
-    const d = new Date(task.dueDate);
-    d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
-    document.querySelector(`#${PREFIX}-date`).value = d
-      .toISOString()
-      .slice(0, 10);
+    document.querySelector(`#${PREFIX}-date`).value =
+      task.getPrettyDate(false, "-") ?? "";
     document.querySelector(`#${PREFIX}-priority`).value = task.priority ?? "";
     dialog.showModal();
   };
